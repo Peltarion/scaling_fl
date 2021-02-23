@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  main:
+    image: ${TRAIN_IMAGE}
+    build:
+      context: .
+      target: 'train'
+      args:  # Set through .env file (see template)
+        - SACRED_USER=${SACRED_USER}
+        - SACRED_PASSWORD=${SACRED_PASSWORD}
+        - SACRED_DATABASE=${SACRED_DATABASE}
+        - SACRED_HOST=${SACRED_HOST}
+    environment:
+    - NVIDIA_VISIBLE_DEVICES=${NVIDIA_VISIBLE_DEVICES}
+    volumes:
+    - ${DATA_MOUNT_DIR}:/workspace/data

@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  main:
+    image: ${DEBUG_IMAGE}
+    build:
+      target: 'debug'
+    ports:
+      - 5678:5678
