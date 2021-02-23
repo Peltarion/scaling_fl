@@ -19,7 +19,8 @@ variables, allowing you to use the same container in e.g. GCP AI Platform.
 To run the agnews job with 4 sites locally, 2 on GPU 0 and 2 on GPU 1, run:
 
 ```console
-> JOB_NAME=$(date +%Y%m%d_%H%M%S) ./run-local.sh scripts/train_federated.py \
+> JOB_NAME=$(date +%Y%m%d_%H%M%S)
+> ./run-local.sh scripts/train_federated.py \
       with \
       site_ids=[0,0,1,1] \
       num_rounds=100 \
