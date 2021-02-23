@@ -25,13 +25,13 @@ To run the agnews job with 4 sites locally, 2 on GPU 0 and 2 on GPU 1, run:
       num_rounds=100 \
       num_local_epochs=2 \
       iid_split=True \
-      task_name=agnews \
-      train_path=/path/to/agnews/train.csv \
-      test_path=/path/to/agnews/test.csv \
-      model=distilbert \
-      job_name=$JOB_NAME \
-      checkpoints_dir=/path/to/checkpoints/$JOB_NAME \
-      author=${USER}
+      task_name="agnews" \
+      train_path="/path/to/agnews/train.csv" \
+      test_path="/path/to/agnews/test.csv" \
+      model="distilbert" \
+      job_name="${JOB_NAME}" \
+      checkpoints_dir="/path/to/checkpoints/${JOB_NAME}" \
+      author="${USER}"
 ```
 
 If you need to store / read from a local disk set up the `$DATA_MOUNT_DIR` in
